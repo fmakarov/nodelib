@@ -25,10 +25,14 @@
     "compile:watch": "tsc -p . --watch --sourceMap",
     "test": "mocha \"out/**/*.spec.js\" -s 0",
     "build": "npm run clean && npm run compile && npm run lint && npm test",
-    "watch": "npm run clean && npm run compile:watch"
+    "watch": "npm run clean && npm run compile:watch",
+    "bench": "node ./out/benchmark/index.js"
   },
   "dependencies": {
     "@nodelib/fs.stat": "2.0.4",
     "run-parallel": "^1.1.9"
+  },
+  "devDependencies": {
+    "@nodelib/fs.scandir": "2.1.2"
   }
 }
